@@ -10,10 +10,13 @@
     }
     function httpGetAsync(url)
     {
-        var popupWindow = window.open(url);
+        var apiKey = document.getElementById("apiKey").value;
+        var popupWindow = window.open(url + "?apiKey=" + apiKey);
         popupWindow.close();
     }
 </script>
+
+<input type="password" id="apiKey" size="10" />
 
 <button onclick = "startServer()" > Start </button>
 <button onclick= "stopServer()" > Stop </button>
