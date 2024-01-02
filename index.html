@@ -12,7 +12,8 @@
     {
         var apiKey = document.getElementById("apiKey").value;
         var popupWindow = window.open(url + "?apiKey=" + apiKey);
-        popupWindow.close();
+        
+        setTimeout(function() {popupWindow.close();}, 1000);
     }
 </script>
 
