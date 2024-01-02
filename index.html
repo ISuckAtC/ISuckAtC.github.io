@@ -1,1 +1,21 @@
 <h1>HELLO WORLD!<h1/>
+<script>
+    function startServer()
+    {
+        httpGetAsync("http://51.20.143.102:25566/start");
+    }
+    function stopServer()
+    {
+        httpGetAsync("http://51.20.143.102:25566/stop");
+    }
+    function httpGetAsync(url)
+    {
+        var request = new XMLHttpRequest();
+        request.open("GET", url, false);
+        request.send();
+        return request.responseText;
+    }
+</script>
+
+<button onclick = "startServer()" > Start </button>
+<button onclick= "stopServer()" > Stop </button>
