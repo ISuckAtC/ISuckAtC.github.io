@@ -10,7 +10,8 @@
     }
     function httpGetAsync(url)
     {
-        window.popup = window.open(url);
+        var popupWindow = window.open(url);
+        popupWindow.close();
     }
 </script>
 
