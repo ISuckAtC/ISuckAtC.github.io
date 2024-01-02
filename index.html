@@ -10,10 +10,7 @@
     }
     function httpGetAsync(url)
     {
-        var request = new XMLHttpRequest();
-        request.open("GET", url, false);
-        request.send();
-        return request.responseText;
+        window.popup = window.open(url);
     }
 </script>
 
