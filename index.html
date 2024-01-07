@@ -14,7 +14,7 @@
         var apiKey = document.getElementById("apiKey").value;
         var name = document.getElementById("whitelist").value;
 
-        var popupWindow = window.open(url + "?apiKey=" + apiKey + "&name=" + name);
+        var popupWindow = window.open(url + encodeURI("?apiKey=" + apiKey + "&name=" + name));
 
         setTimeout(function() {popupWindow.close();}, 1000);
     }
